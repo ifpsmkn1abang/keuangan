@@ -23,7 +23,7 @@ Kebijakan RLS membatasi baca, tambah, ubah, dan hapus transaksi ke pemilik yang 
 
 ## Deploy ke Vercel
 
-1. Push repository ini ke GitHub, lalu impor repository di Vercel. Vercel akan mendeteksi Next.js secara otomatis.
+1. Push repository ini ke GitHub, lalu impor repository di Vercel. `vercel.json` menetapkan framework Next.js dan output `.next`; di Project Settings → Build and Deployment, pastikan framework tidak dipaksa ke `Other` atau Static Site dan Output Directory tidak dioverride menjadi `public`.
 2. Tambahkan `NEXT_PUBLIC_SUPABASE_URL` dan `NEXT_PUBLIC_SUPABASE_ANON_KEY` di Project Settings → Environment Variables untuk environment yang digunakan.
 3. Deploy, lalu tambahkan domain Vercel ke Supabase Authentication → URL Configuration (Site URL dan redirect URLs).
 
